@@ -20,7 +20,7 @@ MetricLoader.prototype = {
     loadMetricsFromObject: function(metricsArr) {
      //   gs.info("Beginning loading metrics from object");
 		//gs.info(metricsArr);
-        metricsArr = metricsArr["result"];
+       // metricsArr = metricsArr["result"];
         for(var i = 0; i < metricsArr.length; i++) {			
             var metric = metricsArr[i];
 			//if(metric["seriesRef"] == undefined || metric["seriesRef"] == null) continue;
