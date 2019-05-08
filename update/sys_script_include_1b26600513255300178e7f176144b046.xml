@@ -11,27 +11,26 @@ LoadHistoricalData.prototype = {
     initialize: function() {
     },
 
-    loadData: function() {
-        for(var i =0; i < 7; i++) {
+    loaloadData: function() {
+        for(var i =0; i < 6; i++) {
             var request = new sn_ws.RESTMessageV2();
             request.setEndpoint('https://clothosimulator.service-now.com/api/x_snc_mbts/thing_simulator/load_historical_data');
             request.setHttpMethod('POST');
-            request.setBasicAuth("clotho", "cl0th0K18");
+            request.setBasicAuth("admin", "cl0th0K18");
             var body = {
+                "name": gs.getProperty('instance_name'),
                 "start_offset": i+1,
                 "end_offset": i
             };
-            request.setRequestBody(JSON.stringify(body));
 
+            body = JSON.stringify(body);
+            request.setRequestBody(body);
             var response = request.execute();
-            //gs.info("The response code is " + response.getStatusCode());
-            //gs.info("The response error message is " + response.getErrorMessage());
-		
-			
-			//gs.info(JSON.stringify(response.getBody()));
-            new MetricLoader().loadMetricsFromJSON(response.getBody());
+            gs.info(response.getStatusCode());
+            gs.info(response.getBody());
         }
-		gs.info("7 days of historical data loaded");
+    }
+		gs.info("3 days of historical data loaded");
     },
     type: 'LoadHistoricalData'
 };]]></script>
