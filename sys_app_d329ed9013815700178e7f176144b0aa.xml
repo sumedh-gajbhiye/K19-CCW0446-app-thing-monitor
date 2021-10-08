@@ -15,7 +15,7 @@
         <scope>x_snc_mbts_monitor</scope>
         <scoped_administration>false</scoped_administration>
         <short_description/>
-        <source>x_snc_mbts_monitor</source>
+        <source>x_snc_mbts_monitor1</source>
         <store_correlation_id/>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
