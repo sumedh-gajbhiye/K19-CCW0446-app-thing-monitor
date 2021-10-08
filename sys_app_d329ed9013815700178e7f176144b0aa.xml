@@ -12,7 +12,7 @@
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
-        <scope>x_snc_mbts_monitor</scope>
+        <scope>x_snc_mbts_monitor1</scope>
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_snc_mbts_monitor1</source>
